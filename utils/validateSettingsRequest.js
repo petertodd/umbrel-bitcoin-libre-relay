@@ -79,9 +79,6 @@ function validateSettingsRequest(settings) {
   // min of 550 MiB (0.5767168 GB). No max specified.
   checkNumberSetting({ setting: settings.prune.pruneSizeGB, settingName: "Prune Target Size", min: 0.6 });
   
-  // Replace-By-Fee (RBF)
-  checkBooleanSetting({ setting: settings.mempoolFullRbf, settingName: "Replace-By-Fee" });
-
   // Permit Bare Multisig
   checkBooleanSetting({ setting: settings.permitbaremultisig, settingName: "permitbaremultisig" });
 

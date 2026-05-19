@@ -31,7 +31,6 @@ const DEFAULT_ADVANCED_SETTINGS = {
     enabled: false,
     pruneSizeGB: 300,
   },
-  mempoolFullRbf: true,
   permitbaremultisig: true,
   maxmempool: 300,
   mempoolexpiry: 336,
@@ -164,12 +163,6 @@ function settingsToMultilineConfString(settings) {
   // [TRANSACTION RELAY]
   umbrelBitcoinConfig.push(""); 
   umbrelBitcoinConfig.push("# [relay]");
-
-  // mempoolfullrbf
-  if (settings.mempoolFullRbf) {
-    umbrelBitcoinConfig.push("# Allow any transaction in the mempool to be replaced with newer versions of the same transaction that include a higher fee."); 
-    umbrelBitcoinConfig.push('mempoolfullrbf=1'); 
-  }
 
   // permitbaremultisig
   if (!settings.permitbaremultisig) {

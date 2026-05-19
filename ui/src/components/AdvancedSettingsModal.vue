@@ -666,37 +666,6 @@
               </div>
             </b-card-body>
 
-            <!-- RBF -->
-            <!-- consider move to a Transactions accordion group -->
-            <b-card-body class="subsetting-body px-2 px-sm-3">
-              <div>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="flex-sm-grow-1">
-                    <label class="mb-0" for="mempool">
-                      <p class="subsetting-title font-weight-bold mb-0 mr-1">
-                        Replace-By-Fee (RBF) for All Transactions
-                        <span class="subsetting-config-name text-monospace font-weight-normal d-block">
-                          mempoolfullrbf
-                        </span>
-                      </p>
-                    </label>
-                  </div>
-                  <div>
-                    <toggle-switch
-                      id="mempool"
-                      class="align-self-center"
-                      :on="settings.mempoolFullRbf"
-                      @toggle="status => (settings.mempoolFullRbf = status)"
-                    ></toggle-switch>
-                  </div>
-                </div>
-                <small class="w-lg-75 d-block text-muted mt-1">
-                  Allow any transaction in the mempool of your Bitcoin node to be replaced with
-                  a newer version of the same transaction that includes a higher fee.
-                </small>
-              </div>
-            </b-card-body>
-
             <!-- PERMITBAREMULTISIG -->
             <b-card-body class="subsetting-body px-2 px-sm-3">
               <div>
